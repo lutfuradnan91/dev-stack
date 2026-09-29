@@ -3,6 +3,7 @@ import Nav from './components/Navigation'
 import Banner from './components/Banner'
 import Cards from './components/Cards'
 import './App.css'
+import Stack from './components/Stack'
 import type { CardType } from './components/Types'
 
 const fetchcarddata = async () =>{
@@ -25,6 +26,14 @@ const addStack = (card:CardType) =>{
   })
 }
 
+const removetoStack = (id: string) => {
+  setSelectedStack((prev) => prev.filter((item) => item.id !== id))
+}
+
+const removeAll = () =>{
+  setSelectedStack([])
+}
+
   return (
     <><Nav></Nav>
     <Banner></Banner>
@@ -37,6 +46,7 @@ const addStack = (card:CardType) =>{
         <div className='grid grid-cols-4 gap-5'>
           <Suspense fallback = {<h2>Loading...</h2>}>
               <Cards CardPromis = {CardPromis} selectedStack = {selectedStack} onAdd = {addStack}></Cards>
+              <Stack selectedStack = {selectedStack} onRemove = {removetoStack} onRemoveAll = {removeAll}></Stack>
           </Suspense>
         </div>
       </section>
