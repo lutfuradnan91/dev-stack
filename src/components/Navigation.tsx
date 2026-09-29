@@ -4,14 +4,14 @@ const Navigation = () => {
     return (
         <div>
             
-            <nav className = "sticky top-0 z-50 w-full border-b border-gray-100">
+            <nav className = "sticky top-0 z-50 w-full border-b border-gray-100 bg-white">
                <div className = "flex justify-between container mx-auto items-center">
                 <img src={logo} alt="Decstac" className='w-22 h-10 object-contain'/>
 
                 <ul className='flex gap-4 items-center text-sm px-0.8'>
                     <li>Home</li>
                     <li>Technologies</li>
-                    <li>Project</li>
+                    <li>Projects</li>
                     <li>About</li>
                     <li>Contact</li>
                 </ul>
