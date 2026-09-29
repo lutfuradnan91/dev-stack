@@ -7,6 +7,7 @@ import Stack from './components/Stack'
 import type { CardType } from './components/Types'
 import {ToastContainer,toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Footer from './components/FooterSection'
 
 const fetchcarddata = async () =>{
   const res = await fetch('/data.json')
@@ -54,6 +55,7 @@ const removeAll = () =>{
         </div>
       </section>
     </main>
+    <Footer></Footer>
     <ToastContainer position='bottom-right' autoClose={400} />
     </>
   )
