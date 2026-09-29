@@ -5,6 +5,8 @@ import Cards from './components/Cards'
 import './App.css'
 import Stack from './components/Stack'
 import type { CardType } from './components/Types'
+import {ToastContainer,toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const fetchcarddata = async () =>{
   const res = await fetch('/data.json')
@@ -24,6 +26,7 @@ const addStack = (card:CardType) =>{
         return prev
       }return[...prev, card]
   })
+  toast.success(`${card.name} ✓Added to Stack`)
 }
 
 const removetoStack = (id: string) => {
@@ -51,6 +54,7 @@ const removeAll = () =>{
         </div>
       </section>
     </main>
+    <ToastContainer position='bottom-right' autoClose={400} />
     </>
   )
 }
