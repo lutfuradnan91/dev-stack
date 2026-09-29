@@ -1,6 +1,6 @@
 Name of my project : A small React app where developers can browse the popular technologies and pick their best development stack.
 
-Little Description about my project : Dev Stack shows 12 technologies from Frontend, Backend, Database, Language, Styling and DevOps. You can add any technology to "Your Stack", remove one item, or clear the whole stack. A toast message tells us  what happened.
+Little Description about my project: Dev Stack shows 12 technologies from Frontend, Backend, Database, Language, Styling and DevOps. You can add any technology to "Your Stack", remove one item, or clear the whole stack. A toast message tells us  what happened.
 
 
 Technology Used :
